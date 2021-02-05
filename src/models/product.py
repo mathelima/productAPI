@@ -4,7 +4,7 @@ from sqlalchemy.orm import validates
 
 
 class Product(BaseModel):
-    __tablename__ = 'product'
+    __tablename__ = 'PRODUCT'
     name = Column('name', String(length=100), nullable=False)
     description = Column('description', String(length=255), nullable=True)
     price = Column('price', Float, nullable=False)
