@@ -36,8 +36,6 @@ class Product(BaseModel):
     def validate_price(self, key, price):
         if not isinstance(price, float):
             raise TypeError("Price must be a float number!")
-        if not price:
-            raise ValueError("Price can't be null!")
         if price <= 0:
             raise ValueError("Price can't be lower than 0!")
         return price
